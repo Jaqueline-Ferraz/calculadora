@@ -1,0 +1,107 @@
+* body {
+  background: linear-gradient(45deg, #ff00d4, #00ddff);
+  box-sizing: border-box;
+  font-family: "Source Code Pro", monospace;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  background-color: rgba(16, 16, 16, 0.6);
+  border: 2px solid transparent;
+  border-image: linear-gradient(45deg, #ff00d4, #00ddff) 1;
+  box-shadow: 0px 0px 6px #101010;
+  padding: 40px;
+  animation: borderGradient 6s infinite linear;
+}
+
+@keyframes borderGradient {
+  0% {
+    border-image: linear-gradient(45deg, #ff00d4, #00ddff) 1;
+  }
+  25% {
+    border-image: linear-gradient(45deg, #00ddff, #ff00d4) 1;
+  }
+  50% {
+    border-image: linear-gradient(45deg, #ff00d4, #00ddff) 1;
+  }
+  75% {
+    border-image: linear-gradient(45deg, #00ddff, #ff00d4) 1;
+  }
+  100% {
+    border-image: linear-gradient(45deg, #ff00d4, #00ddff) 1;
+  }
+}
+
+#output {
+  width: 252px;
+  height: 40px;
+  background: linear-gradient(45deg, rgb(255, 0, 212, 1), rgb(0, 221, 255, 1));
+  box-shadow: 0px 0px 10px #00ddff;
+  border: 2px solid #00ddff;
+  color: #fffaf0;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 2px;
+  margin-bottom: 10px;
+  padding: 40px;
+  overflow: auto;
+  text-align: right;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  width: 80px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  margin: 2px;
+  background: linear-gradient(45deg, rgb(255, 0, 212, 0.8), rgb(0, 221, 255, 0.8));
+  border: none;
+  box-shadow: 0px 0px 6px #101010;
+  color: #fffaf0;
+  cursor: pointer;
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.4em;
+  font-weight: bold;
+  transition: all 0.6s ease-in-out;
+}
+
+button:hover {
+  background: #00ddff;
+  box-shadow: 0px 0px 20px #00ddff;
+  color: #ff00d4;
+}
+
+button:active {
+  transform: scale(0.8);
+}
+
+.number {
+  font-size: 1.4em;
+}
+
+#equal-btn {
+  width: 248px;
+}
